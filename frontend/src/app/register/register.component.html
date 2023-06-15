@@ -1,0 +1,55 @@
+<form [formGroup]="validationForm" (ngSubmit)="onSubmit()">
+  <div class="container-fluid">
+    <div class="row justify-content-center p-5">
+      <div class="col-md-4 col-sm-6 col-lg-3">
+        <div class="text-center">
+          <img src="/assets/images/bg.png" class="rounded" alt="imageBg">
+        </div>
+        <div class="col-md-12 text-center">
+          <p class="easy-media">Easy Media</p>
+          <p class="share">Now, share is easy</p>
+          <p class="sign-up">Sign Up</p>
+        </div>
+        <div class="col-md-12">
+          <label class="form-label" for="fullName" >Full Name</label>
+          <input type="text" id="fullName" class="form-control input" placeholder="Sergio Dominguez" formControlName="fullName" required />
+          <label *ngIf="fullName?.invalid && (fullName?.dirty || fullName?.touched)">Full Name is required</label>
+          <label *ngIf="fullName?.valid && (fullName?.dirty || fullName?.touched)">Looks good!</label>
+        </div>
+        <div class="col-md-12">
+          <label class="form-label" for="email" >Email</label>
+          <input type="text" id="email" class="form-control input" placeholder="example@gmail.com" formControlName="email" required />
+          <label *ngIf="email?.invalid && (email?.dirty || email?.touched)">Email is required</label>
+          <label *ngIf="email?.valid && (email?.dirty || email?.touched)">Looks good!</label>
+        </div>
+        <div class="col-md-12">
+          <label class="form-label" for="password" >Password</label>
+          <input [type]="passwordType ? 'text' : 'password'" id="password" class="form-control input" placeholder="*****" formControlName="password" required />
+          <i (click)="showPassword('password')" [class]="passwordType ? 'fa-eye' : 'fa-eye-slash'" class="fa-regular fa-eye-slash icon-see"></i>
+          <label *ngIf="password?.invalid && (password?.dirty || password?.touched)">Password is required</label>
+          <label *ngIf="password?.valid && (password?.dirty || password?.touched) && !validationForm.errors?.passwordMismatch">Looks good!</label>
+          <label *ngIf="validationForm.errors?.passwordMismatch">Passwords do not match</label>
+        </div>
+        <div class="col-md-12">
+          <label class="form-label" for="confirmPassword">Confirm Password</label>
+          <input [type]="confirmPasswordType ? 'text' : 'password'" id="confirmPassword" class="form-control input" placeholder="*****" formControlName="confirmPassword" required />
+          <i (click)="showPassword('confirmPassword')" [class]="confirmPasswordType ? 'fa-eye' : 'fa-eye-slash'" class="fa-regular fa-eye-slash icon-see"></i>
+          <label *ngIf="confirmPassword?.invalid && (confirmPassword?.dirty || confirmPassword?.touched)">Confirm password is required</label>
+          <label *ngIf="confirmPassword?.valid && (confirmPassword?.dirty || confirmPassword?.touched) && !validationForm.errors?.passwordMismatch">Looks
+            good!</label>
+            <label *ngIf="validationForm.errors?.passwordMismatch">Passwords do not match</label>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-11">
+            <button type="submit" class="sign-up-btn">Sign Up</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-end already-have-account">Already have an account? <label (click)="goToLogin()">Login</label></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

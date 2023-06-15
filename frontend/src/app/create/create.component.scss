@@ -1,0 +1,87 @@
+.container-fluid {
+    height: 100vh;
+}
+
+.easy-media {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 36px;
+    color: #FFFFFF;
+    margin-bottom: 0px;
+}
+
+
+
+.share-btn {
+    margin-top: 10px;
+    background: linear-gradient(270deg, #C645A9 17.66%, #58BBDB 89.57%);
+    border-radius: 20px;
+    text-transform: uppercase;
+    border: none;
+    width: 50%;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 33px;
+    float: right;
+    
+}
+
+.input {
+    outline: none;
+    margin-top: -7px;
+    margin-bottom: 10px;
+    border-width: 3px;
+    border-radius: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    background: #EBEBEB;
+    border: 1px solid #5F5E5E;
+    padding: 10px 0px 7px 0px;
+    color: #474747;
+    
+
+    &:focus {
+        outline: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    &::placeholder {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        color: #B7B7B7;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.form-label {
+    padding-top: 20px;
+    font-weight: 700;
+    color: #0E2248;
+   
+}
+
+.form-control {
+    border-radius: 16px;
+}
+
+#messages {
+    height: 91px;
+}
+
+.word-counter {
+    margin-top: 5px;
+    font-size: 10px;
+    font-weight: 500;
+    color: #5F5E5E;
+    float: right;
+    line-height: 12px;
+ 
+}
+

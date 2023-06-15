@@ -1,0 +1,34 @@
+<form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+    <div class="container-fluid">
+        <div class="row justify-content-center p-5">
+            <div class="col-md-4 col-sm-6 col-lg-3">
+                <div class="col-md-12 text-center">
+                    <p class="easy-media">Create message</p>
+                </div>
+                <div class="col-md-12">
+                    <label class="form-label" for="title">Title messages</label>
+                    <input type="text" id="title" class="form-control input" placeholder="Your post title" formControlName="title" required />
+                    <label *ngIf="title?.invalid && (title?.dirty || title?.touched)">Title is required</label>
+                    <label *ngIf="title?.valid && (title?.dirty || title?.touched)">Looks good!</label>
+                    <div class="word-counter">{{ postForm.get('title')?.value?.length }}/30</div>
+                </div>
+                <div class="col-md-12">
+                    <label class="form-label" for="messages">Messages</label>
+                    <textarea id="messages" class="form-control input" placeholder="Create messages to share with your friends" formControlName="messages" required></textarea>
+                    <label *ngIf="messages?.invalid && (messages?.dirty || title?.touched)">Message is required</label>
+                    <label *ngIf="messages?.valid && (messages?.dirty || title?.touched)">Looks good!</label>
+                    <div class="word-counter">{{ postForm.get('messages')?.value?.length }}/300</div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-11">
+                        <button type="submit" class="share-btn">Share</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+
+<app-card #card></app-card>

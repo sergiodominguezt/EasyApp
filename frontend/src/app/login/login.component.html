@@ -1,0 +1,40 @@
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="container-fluid">
+      <div class="row justify-content-center p-5">
+        <div class="col-md-4 col-sm-6 col-lg-3">
+          <div class="text-center">
+            <img src="/assets/images/bg.png" class="rounded" alt="imageBg">
+          </div>
+          <div class="col-md-12 text-center">
+            <p class="easy-media">Easy Media</p>
+            <p class="share">Now, share is easy</p>
+            <p class="sign-up">Sign in</p>
+          </div>
+          <div class="col-md-12">
+            <label class="form-label" for="email" >Email</label>
+            <input type="text" id="email" class="form-control input" placeholder="example@gmail.com" formControlName="email" required />
+            <label *ngIf="email?.invalid && (email?.dirty || email?.touched)">Email is required</label>
+            <label *ngIf="email?.valid && (email?.dirty || email?.touched)">Looks good!</label>
+          </div>
+          <div class="col-md-12">
+            <label class="form-label" for="password" >Password</label>
+            <input type="password" id="password" class="form-control input" placeholder="*****" formControlName="password" required />
+            <label *ngIf="password?.invalid && (password?.dirty || password?.touched)">Email is required</label>
+            <label *ngIf="password?.valid && (password?.dirty || password?.touched)">Looks good!</label>
+          </div>
+          
+          <div class="row justify-content-center">
+            <div class="col-md-11">
+              <button type="submit" class="sign-up-btn">Sign in</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p class="text-end already-have-account">Don't have an account? <label (click)="goToSignUp()">Sign up here</label></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>

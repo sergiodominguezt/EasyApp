@@ -1,0 +1,80 @@
+.container-fluid {
+    height: 100vh;
+}
+
+.easy-media {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 36px;
+    color: #FFFFFF;
+    margin-bottom: 0px;
+}
+
+
+.share {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 0px;
+    color: #48E3BE;
+}
+
+.sign-up {
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.sign-up-btn {
+    margin-top: 10px;
+    background: linear-gradient(270deg, #C645A9 17.66%, #58BBDB 89.57%);
+    border-radius: 20px;
+    text-transform: uppercase;
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 33px;
+}
+
+.input {
+    outline: none;
+    margin-top: -7px;
+    margin-bottom: 10px;
+    border-width: 3px;
+    border-radius: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    background: transparent;
+    border-color: white;
+    padding: 10px 0px 7px 0px;
+    color: white;
+
+    &:focus {
+        outline: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    &::placeholder {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        color: #B7B7B7;
+    }
+}
+
+.form-label {
+    color: #0E2248;
+}
+
+.already-have-account {
+    margin-top: 12px;
+    font-size: 10px;
+    color: #B7B7B7;
+
+    label {
+        color: #48E3BE;
+    }
+}
