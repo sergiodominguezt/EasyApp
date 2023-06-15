@@ -4,7 +4,7 @@ Easy App is a social media app to share and list posts with other users.
 <br>
 <br>
 
-## Installation / Instalación
+## Installation
 In order the app to run, you'll have to run <npm install> to install all the necessary dependencies and libraries, after this you can start the server by going to the backend folder and run: npm start
 After the backend is on you'll have to turn on frontend by going to the frontend folder and run: npm start or ng serve
   
