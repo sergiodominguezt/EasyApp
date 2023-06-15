@@ -25,5 +25,4 @@ Create post page:
   
   - Developed the app using NodeJS and Express for backend. Angular for frontend.
   - MongoDB Compass to database
-
-  
+  - JWT for authentication purposes
